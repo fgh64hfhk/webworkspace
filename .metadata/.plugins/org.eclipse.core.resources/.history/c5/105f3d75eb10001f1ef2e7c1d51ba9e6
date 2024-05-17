@@ -1,0 +1,14 @@
+package com.beans;
+
+import jakarta.websocket.Session;
+
+public class ws_client {
+	private Session session;
+	private boolean isClient1;
+	public boolean isClient1() {
+		return isClient1;
+	}
+	public void setClient1(boolean isClient1) {
+		this.isClient1 = isClient1;
+	}
+}

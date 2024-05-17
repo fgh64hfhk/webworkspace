@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>View03 page</title>
+</head>
+<body>
+	<h1 style="background-color: blue; color: white">Calculator V3</h1>
+	<hr />
+	<form action="Servlet14">
+		<input name="x" value="%s" />
+		<select name='operator'>
+			<option value='1' selected="selected">+</option>
+			<option value='2'>-</option>
+			<option value='3'>x</option>
+			<option value='4'>/</option>
+		</select>
+		<input name="y" value="%s" />
+		
+		<input type="submit" value="=">
+
+	</form>
+	<hr />
+	<h2>Answer:<span>%s</span></h2>
+	
+</body>
+</html>

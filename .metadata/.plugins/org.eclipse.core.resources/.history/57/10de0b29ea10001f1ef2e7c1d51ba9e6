@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>MyDrawer page</title>
+		<script type="text/javascript">
+			let canvas, ctx;
+			window.onload = function() {
+				
+				webSocket = new WebSocket('ws://localhost:8080/eeit82_web/mycenter');
+				
+				webSocket.onerror = function(event) {
+					console.log("Error: " + event);
+				}
+				
+				webSocket.onopen = function(event) {
+					console.log(event.type);
+					console.log("Server Connection.");
+					
+					let message = {
+						to_event: event.type,
+						offset_x: 0,
+						offset_y: 0
+					};
+					webSocket.send(JSON.stringify(message));
+				}
+				
+				webSocket.onmessage = function(event) {
+					console.log(event);
+				}
+
+				webSocket.onclose = function(event) {
+					console.log("Server Disconnection.");
+					let message = {
+							to_event: event.type,
+							offset_x: 0,
+							offset_y: 0
+						};
+						webSocket.send(JSON.stringify(message));
+				}
+				
+				canvas = document.getElementById('myDrawer');
+				ctx = canvas.getContext('2d');
+				
+				ctx.beginPath();
+				ctx.lineWidth = 4;
+				
+				let isDrag = false;
+				canvas.onmousedown = function(event) {
+					console.log(event.type);
+					let x = event.offsetX, y = event.offsetY;
+					isDrag = true;
+					ctx.moveTo(x, y);
+					let message = {
+						to_event: event.type,
+						offset_x: x,
+						offset_y: y
+					};
+					webSocket.send(JSON.stringify(message));
+					console.log('mousedown => x: ' + x + ' ,y: ' + y);
+				}
+				
+				canvas.onmousemove = function(event) {
+					console.log(event.type);
+					if (isDrag) {
+						let x = event.offsetX, y = event.offsetY;
+						ctx.lineTo(x, y);
+						ctx.stroke();
+						let message = {
+							to_event: event.type,
+							offset_x: x,
+							offset_y: y
+						};
+						webSocket.send(JSON.stringify(message));
+						console.log('mousemove => x: ' + x + ' ,y: ' + y);
+					}
+				}
+				
+				canvas.onmouseup = function(event) {
+					isDrag = false;
+				}
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		<canvas id="myDrawer" width="640px" height="480px" style="border: 1px solid black">
+		
+		</canvas>
+	</body>
+</html>

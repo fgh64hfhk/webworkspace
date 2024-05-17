@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>MyViewer page</title>
+		<script type="text/javascript">
+			let canvas, ctx;
+			window.onload = function() {
+				
+				webSocket = new WebSocket('ws://localhost:8080/eeit82_web/mycenter');
+				
+				webSocket.onerror = function(event) {
+					console.log("-----Error-----");
+					console.log(event)
+				}
+				
+				webSocket.onopen = function(event) {
+					console.log("-----Open-----");
+					console.log(event)
+					
+					console.log("Server Connection.");
+				}
+				
+				webSocket.onmessage = function(event) {
+					console.log("-----Message-----");
+					console.log(event)
+					
+					let data = JSON.parse(event.data);
+					
+					switch (data.client1_event) {
+					case "open":
+						console.log("open");
+						clear();
+						break;
+					case "mousedown":
+						moveTo(data.offset_x, data.offset_y);
+						break;
+					case "mousemove":
+						drawLine(data.offset_x, data.offset_y);
+						break;
+					case "clear":
+						console.log("clear");
+						clear();
+						break;
+					default:
+						console.log("error");
+						break;
+					}
+				}
+
+				webSocket.onclose = function(event) {
+					console.log("-----Close-----");
+					console.log(event)
+					
+					console.log("Server Disconnection.");
+				}
+				
+				canvas = document.getElementById('myViewer');
+				ctx = canvas.getContext('2d');
+				
+				ctx.beginPath();
+				ctx.lineWidth = 4;
+				
+				function moveTo(x, y) {
+					ctx.moveTo(x, y);
+				}
+				
+				function drawLine(x, y) {
+					ctx.lineTo(x, y);
+					ctx.stroke();
+				}
+				
+				function clear() {
+					ctx.beginPath();
+					ctx.clearRect(0, 0, canvas.width, canvas.height);
+				}
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		<canvas id="myViewer" width="640px" height="480px" style="border: 1px solid black">
+		
+		</canvas>
+	</body>
+</html>

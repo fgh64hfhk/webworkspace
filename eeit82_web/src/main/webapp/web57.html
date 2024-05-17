@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>web57 page</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			function search() {
+				$.get(
+					// url
+					'web58.jsp?orderId=' + $('#orderId').val(),
+					// callback function
+					function(data, status){
+						if (status == 'success') {
+							$('#oid').html(data.orderId);
+							$('#cid').html(data.customerId);
+							$('#od').html(data.orderDate);
+							$('#tbody').empty();
+							$('#tfoot').empty();
+							var arr = data.orderDetails;
+							var total = 0;
+							$.each( arr, function( index, value){
+								
+								$('#tbody').append(
+									'<tr>' + 
+										'<td>' + (index + 1) + '</td>' + 
+										'<td>' + value.productId + '</td>' + 
+										'<td>' + value.productName + '</td>' + 
+										'<td>' + value.unitPrice + '</td>' + 
+										'<td>' + value.quantity + '</td>' + 
+									'</tr>'
+								);
+								total += value.unitPrice * value.quantity
+							});
+							
+							$('#tfoot').append(
+								'<tr>' + 
+									'<td>' + "" + '</td>' + 
+									'<td>' + "" + '</td>' + 
+									'<td>' + "" + '</td>' + 
+									'<td>' + "Total" + '</td>' + 
+									'<td>' + total + '</td>' + 
+								'</tr>'
+							);
+							
+							$('#order').show();
+						};
+					}
+				);
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Title</h1>
+		<div>
+			OrderID:
+			<input type="text" id="orderId">
+			<input type="button" onclick="search()" value="Search">
+			<span id="msg"></span>
+		</div>
+		<hr>
+
+		<div id="order" style="display: none;">
+			Order ID: <span id="oid"></span> <br>
+			Customer ID: <span id="cid"></span> <br>
+			Order Date: <span id="od"></span> <hr>
+			
+			Order Detail:
+			<hr>
+			
+			<table border="1" style="width: 100%">
+				<caption>
+					Order Detail Table V1
+				</caption>
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Product ID</th>
+						<th scope="col">Product Name</th>
+						<th scope="col">Product UnitPrice</th>
+						<th scope="col">Product Quantity</th>
+				    </tr>
+				</thead>
+				<tbody id="tbody">
+					<tr>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+					</tr>
+				</tbody>
+				<tfoot id="tfoot">
+					<tr>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</body>
+</html>

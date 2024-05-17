@@ -1,0 +1,84 @@
+/**
+ * 
+ */
+$(() => {
+	$.get(
+		// url
+		'web58_1.jsp',
+		// callback function
+		function(data, status) {
+			if (status == 'success') {
+				for (let i = 0; i < 9; i++) {
+					$('#product').append(
+						'<div class="product col-4 float-left ">' +
+						'<div class="image-container">' +
+
+						'<a href="#">' +
+						`<img src="${ data.color_picture.黑 }" alt="">` +
+						
+						'<div class="image-overlay"></div>' + 
+						
+						`<img class="second-image" src="${ data.color_picture.黑 }" alt="Second Image"></a></div>` +
+
+						'<p class="title-name title"><a href="#">' + 
+						'商品編號: ' + data.productId +
+						'<br>' +
+						
+						'商品名稱: ' + data.model + 
+						'<br>' +
+						
+						'商品價格: $' +  data.price + 
+						
+						'</a></p>' +
+						'</div>' +
+						'</div>'
+					);
+				}
+
+			};
+		}
+	);
+})
+function search() {
+	$.get(
+		// url
+		'web58.jsp?orderId=' + $('#orderId').val(),
+		// callback function
+		function(data, status){
+			if (status == 'success') {
+				$('#oid').html(data.orderId);
+				$('#cid').html(data.customerId);
+				$('#od').html(data.orderDate);
+				$('#tbody').empty();
+				$('#tfoot').empty();
+				var arr = data.orderDetails;
+				var total = 0;
+				$.each( arr, function( index, value){
+					
+					$('#tbody').append(
+						'<tr>' + 
+							'<td>' + (index + 1) + '</td>' + 
+							'<td>' + value.productId + '</td>' + 
+							'<td>' + value.productName + '</td>' + 
+							'<td>' + value.unitPrice + '</td>' + 
+							'<td>' + value.quantity + '</td>' + 
+						'</tr>'
+					);
+					total += value.unitPrice * value.quantity
+				});
+				
+				$('#tfoot').append(
+					'<tr>' + 
+						'<td>' + "" + '</td>' + 
+						'<td>' + "" + '</td>' + 
+						'<td>' + "" + '</td>' + 
+						'<td>' + "Total" + '</td>' + 
+						'<td>' + total + '</td>' + 
+					'</tr>'
+				);
+				
+				$('#order').show();
+			};
+		}
+	);
+}

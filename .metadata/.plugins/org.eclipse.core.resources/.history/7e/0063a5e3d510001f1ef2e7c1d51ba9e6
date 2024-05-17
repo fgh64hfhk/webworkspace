@@ -1,0 +1,46 @@
+$(() => {
+	console.log("OK");
+	let start = $('#start');
+	let message_div = $('#message_div');
+	let message = $('#message');
+	let send = $('#send');
+	let log = $('#log');
+	
+	let webSocket;
+	
+	start.on('click', () => {
+		connect();
+	});
+	
+	send.on('click', () => {
+		let json_message = {
+			message: message.val()
+		};
+		webSocket.send(JSON.stringify(json_message));
+	});
+	
+	function connect() {
+		webSocket = new WebSocket('ws://10.0.103.50:8080/bradweb/myserver');
+		
+		webSocket.onerror = function(event) {
+			
+			console.log("Error: " + event);
+		}
+		
+		webSocket.onopen = function(event) {
+			console.log("Server Connection.");
+			start.hide('fast');
+			message_div.show();
+		}
+		
+		webSocket.onmessage = function(event) {
+			
+		}
+
+		webSocket.onclose = function(event) {
+			console.log("Server Disconnection.");
+			message_div.hide('fast');
+			start.show();
+		}
+	}
+})

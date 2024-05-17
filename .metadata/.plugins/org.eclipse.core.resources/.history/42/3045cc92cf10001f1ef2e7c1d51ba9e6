@@ -1,0 +1,42 @@
+package com.websocket;
+
+import java.util.HashMap;
+import java.util.HashSet;
+
+import jakarta.websocket.OnClose;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.ServerEndpoint;
+
+@ServerEndpoint("/myserver")
+public class MyServer {
+	private static HashSet<Session> sessions;
+	private static HashMap<String, Session> users;
+	
+	public MyServer() {
+		sessions = new HashSet<Session>();
+		users = new HashMap<String, Session>();
+	}
+	
+	@OnOpen
+	public void onOpen(Session session) {
+		if (sessions.add(session)) {
+			users.put(session.getId(), session);
+		}
+		System.out.println("User count: " + sessions.size());
+	}
+	
+	public void onMessage(String message, Session session) {
+		System.out.println("message: " + message);
+	}
+	
+	public void onError() {
+		
+	}
+	
+	@OnClose
+	public void onClose(Session session) {
+		users.remove(session.getId());
+		sessions.remove(session);
+	}
+}

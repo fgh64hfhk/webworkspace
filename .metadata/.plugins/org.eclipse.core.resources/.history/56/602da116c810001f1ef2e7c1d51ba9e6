@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>web60 page</title>
+	</head>
+	<body>
+		<div>
+			<button id="start">Start Connection</button>
+		</div>
+		<div id="message_div"></div>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>web60 page</title>
+		<script type="text/javascript" src="js/my_script.js"></script>
+	</head>
+	<body>
+		<div>
+			<button id="start">Start Connection</button>
+		</div>
+		<hr>
+		<div id="message_div">
+			<input id="message" />
+			<button id="send">Send Message</button>
+		</div>
+		<hr>
+		<div id="log">Message</div>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>web60 page</title>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/my_script.js"></script>
+	</head>
+	<body>
+		<div>
+			<button id="start">Start Connection</button>
+		</div>
+		
+		<div id="message_div" style="display: none">
+			<hr>
+			<input id="message" />
+			<button id="send">Send Message</button>
+			<div id="log">Message</div>
+		</div>
+		<hr>
+		
+	</body>
+</html>

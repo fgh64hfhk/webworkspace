@@ -1,0 +1,5 @@
+在 Java Servlet 中，RequestDispatcher 介面提供了兩種方法來轉發請求：
+
+forward(ServletRequest request, ServletResponse response)：此方法用於將請求直接轉發給另一個 Servlet 或 JSP，完全由目標資源處理請求。原始請求的 ServletResponse 對象不會被送到客戶端，因為請求已經被完全處理。
+include(ServletRequest request, ServletResponse response)：此方法也將請求轉發到另一個 Servlet 或 JSP，但在轉發完成後，控制權會返回給原始 Servlet，它可以繼續處理請求。回應內容將包含原始 Servlet 和目標 Servlet 的內容。這使得原始 Servlet 可以將多個資源的內容組合在一起後再回傳給客戶端。
+簡而言之，forward 是直接轉發，完全由目標資源處理請求，而 include 則是轉發後返回原始資源，並將目標資源的內容包含在回應中。

@@ -1,0 +1,17 @@
+127.0.0.1 - - [17/May/2024:13:49:58 +0800] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:49:58 +0800] "GET /eeit82_web/ HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:49:58 +0800] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:50:01 +0800] "GET /eeit82_web/man.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:50:01 +0800] "GET /eeit82_web/JS/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css HTTP/1.1" 404 837
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:50:01 +0800] "GET /eeit82_web/JS/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css HTTP/1.1" 404 869
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:50:01 +0800] "GET /eeit82_web/JS/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js HTTP/1.1" 404 852
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:50:01 +0800] "GET /eeit82_web/css/styles.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:50:01 +0800] "GET /eeit82_web/JS/OwlCarousel2-2.3.4/docs_src/assets/vendors/jquery.min.js HTTP/1.1" 404 846
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:50:01 +0800] "GET /eeit82_web/js/create_product.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:50:02 +0800] "GET /eeit82_web/web58_1.jsp HTTP/1.1" 500 4128
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:51:21 +0800] "GET /eeit82_web/man.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:51:21 +0800] "GET /eeit82_web/JS/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css HTTP/1.1" 404 869
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:51:21 +0800] "GET /eeit82_web/JS/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css HTTP/1.1" 404 837
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:51:21 +0800] "GET /eeit82_web/JS/OwlCarousel2-2.3.4/docs_src/assets/vendors/jquery.min.js HTTP/1.1" 404 846
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:51:21 +0800] "GET /eeit82_web/JS/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js HTTP/1.1" 404 852
+0:0:0:0:0:0:0:1 - - [17/May/2024:13:51:21 +0800] "GET /eeit82_web/web58_1.jsp HTTP/1.1" 200 733

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>web55 page</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			function test1(){
+				$('#id1').load('web56.jsp?max=' + $('#max').val());
+			}
+			function test2(){
+				$.get('web56.jsp?max=' + $('#max').val(), function(data, status){
+					if (status == 'success'){
+						$('#id1').html(data);
+					}
+				});
+			}
+			function test3(){
+				$.post('web56.jsp',
+					{
+						"max" : $('#max').val()
+					},
+					function(data, status){
+						if (status == 'success'){
+							$('#id1').html(data);
+						}					
+					}
+				);
+			}
+			function test4(){
+				$.ajax({
+					url: 'web56.jsp',
+					method: 'post',
+					data: {
+						max : $('#max').val()
+					},
+					success: function(data){
+						$('#id1').html(data);
+					},
+					contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Lottery: <span id="id1"></span><br /></h1>
+		<h2>Max: <input type="number" id="max" /></h2>
+		
+		<hr>
+		<input type="button" onclick="test1()" value="Test1" /><br />
+		<input type="button" onclick="test2()" value="Test2" /><br />
+		<input type="button" onclick="test3()" value="Test3" /><br />
+		<input type="button" onclick="test4()" value="Test4" /><br />
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>web61 page</title>
+		<script type="text/javascript" src="js/cookies.js"></script>
+	</head>
+	<body>
+		<h1>模擬登入頁面</h1>
+		<form action="web62.jsp" onsubmit="return false;">
+			Account:
+			<input name="account" id="account" /><br /><br />
+			Password:
+			<input name="password" id="password" /><br /><br />
+			<input type="checkbox" id="remember" /> Remember Me<br />
+			<input type="submit" value="Login" />
+		</form>
+	</body>
+</html>

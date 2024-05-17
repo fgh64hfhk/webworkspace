@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Eeeit82_web index page</title>
+</head>
+<body>
+	<h1>Eeeit82_web index page</h1>
+	<hr>
+	<h2>Eeeit82_web Router</h2>
+	<ul>
+		<li>
+			<h2>
+				<a href="login.jsp">Login Page</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="jquery_test.jsp">jquery_test</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="ajax.html">Ajax test</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web53.html">Ajax test : web53 - web54</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web55.html">Ajax test : web55 - web56</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web57.html">查詢前端</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web58.jsp">資料庫後端</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web60.html">web60 - web_socket</a>
+			</h2>
+		</li>
+	</ul>
+	<hr>
+	<ul>
+		<li>
+			<h2>
+				<a href="Servlet01">Servlet01</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="Servlet02">Servlet02</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="Servlet03">Servlet03</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="Servlet04">Servlet04</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="Servlet05">Servlet05</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="Servlet06">Servlet06</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web07.html">web07 - Servlet07</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web08.html">web08 - Servlet08</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web09.html">web09 - Servlet09</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="Servlet10">Servlet10 - Servlet11</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="Servlet12">Servlet12 - Servlet13</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="Servlet14">Servlet14 - Servlet15</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="Servlet16">Servlet16</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web16.html">web16 - Servlet16</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="Servlet17">Servlet17</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="Servlet18">Servlet18</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web20.jsp">web20</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web22.jsp">web22</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web23.jsp">web23 - Register - web24</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web25.jsp">web25 - web26</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web27.jsp">web27 - web28</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web29.jsp">web29</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web30.jsp">web30 - web31</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web32.jsp">web32 - EL expression</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web33.jsp">web33 - web34</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web35.jsp">web35</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web36.jsp">web36</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web37.jsp">web37</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web38.jsp">web38</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web39.jsp">web39</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web40.jsp">web40</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web41.jsp">web41</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web42.jsp">web42</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web43.jsp">web43</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web44.jsp">web44</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web45.jsp">web45</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web46.jsp">web46 - 美食小吃列表(分頁模式)</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web46-1.jsp">web46-1 - 美食小吃列表(分頁模式)</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web47.jsp">web47 - page, rpp test</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web48.jsp">web48</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web49.jsp">web49 - 旅遊景點資料</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web50.jsp">web50 - Jstl c:set 測試</a>
+			</h2>
+		</li>
+		<li>
+			<h2>
+				<a href="web51.jsp">web51 - web51-1 session 測試</a>
+			</h2>
+		</li>
+	</ul>
+</body>
+</html>
